@@ -3836,6 +3836,393 @@ abcde000111abcdefghijklmnopqrstuvwxyz1234567890123456789012345678901234567890123
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="10.02.001_Verify max-multipart-buffsize-per-arg in system advanced settings works correctly(system setting args is 2)" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">POST / HTTP/1.1&#xd;
+Host: 10.5.25.22&#xd;
+Connection: keep-alive&#xd;
+Content-Length: 1414&#xd;
+Cache-Control: no-cache&#xd;
+Origin: chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop&#xd;
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundarykteXcfcLyLoCIBUw&#xd;
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36&#xd;
+Postman-Token: f27db6c9-17c3-34f3-7c25-de5a28d1ba4f&#xd;
+Accept: */*&#xd;
+DNT: 1&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+Accept-Language: en-US,en;q=0.8,hi;q=0.6,fr;q=0.4&#xd;
+&#xd;
+------WebKitFormBoundarykteXcfcLyLoCIBUw&#xd;
+Content-Disposition: form-data; name=&quot;test2&quot;&#xd;
+&#xd;
+112122qawqwqwqwqwqw11111112121212121212121212121111111111111111111111212121212121212121212121111111111 &lt;UserIdentityKey&gt;201502145&lt;/UserIdentityKey&gt; &lt;BaseQuery&gt;FreeQuery&lt;/BaseQuery&gt; &lt;QueryOrigin&gt;8&lt;/QueryOrigin&gt; &lt;IsPublic&gt;false&lt;/IsPublic&gt; &lt;IsDefaultQuery&gt;false&lt;/IsDefaultQuery&gt; &lt;DisplayInHomePage&gt;true&lt;/DisplayInHomePage&gt; &lt;UseDistinctClause&gt;false&lt;/UseDistinctClause&gt; &lt;CSSMarkedForDelete&gt;false&lt;/CSSMarkedForDelete&gt; &lt;FreeQueryInfos diffgr:id=&quot;FreeQueryInfos1&quot; msdata:rowOrder=&quot;0&quot; diffgr:hasChanges=&quot;inserted&quot;&gt; &lt;FreeQueryInfosKey&gt;FreeQueryInfos_NewClientKey&lt;/FreeQueryInfosKey&gt; &lt;QueryKey&gt;QuerySearch_NewClientKey&lt;/QueryKey&gt; &lt;GlobalMediaTextQueryKey&gt;NewClientKey001&lt;/GlobalMediaTextQueryKey&gt; &lt;GlobalMediaHtmlQueryKey&gt;NewClientKey001&lt;/GlobalMediaHtmlQueryKey&gt; &lt;GlobalMediaTextQuery&gt;select from &lt;/GlobalMediaTextQuery&gt; &lt;GlobalMediaHtmlQuery&gt;select from &lt;/GlobalMediaHtmlQuery&gt; &lt;CSSMarkedForDelete&gt;false&lt;/CSSMarkedForDelete&gt; &lt;/FreeQueryInfos&gt; &lt;QueryComment&gt;&amp;lt;a href=&quot;&quot;javascript:alert(&apos;111&apos;); void(0);&quot;&quot;&amp;gt;test111&amp;lt;/a&amp;gt;&lt;/QueryComment&gt;&lt;QueryDescription&gt;&amp;lt;a href=&quot;&quot;javascript:alert(&apos;111&apos;); void(0);&quot;&quot;&amp;gt;test111&amp;lt;/a&amp;gt;&lt;/QueryDescription&gt;&lt;/QuerySearch&gt; &lt;/FreeQueryDataRaw&gt; &lt;/diffgr:diffgram&gt;&#xd;
+------WebKitFormBoundarykteXcfcLyLoCIBUw&#xd;
+Content-Disposition: form-data; name=&quot;&quot;&#xd;
+&#xd;
+&#xd;
+------WebKitFormBoundarykteXcfcLyLoCIBUw--&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">test.tiga.com</stringProp>
+          <stringProp name="HTTPSampler.port">8090</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">CLOUD-WAF-POLICY-HOST</stringProp>
+                <stringProp name="Header.value">qgliu.qcloudwaf.com</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="10.02.002_Verify max-multipart-buffsize-per-arg in system advanced settings works correctly(system setting args is 2)" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">POST / HTTP/1.1&#xd;
+Host: 10.5.25.22&#xd;
+Connection: keep-alive&#xd;
+Content-Length: 1500&#xd;
+Cache-Control: no-cache&#xd;
+Origin: chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop&#xd;
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundarykteXcfcLyLoCIBUw&#xd;
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/52.0.2743.116 Safari/537.36&#xd;
+Postman-Token: f27db6c9-17c3-34f3-7c25-de5a28d1ba4f&#xd;
+Accept: */*&#xd;
+DNT: 1&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+Accept-Language: en-US,en;q=0.8,hi;q=0.6,fr;q=0.4&#xd;
+&#xd;
+------WebKitFormBoundarykteXcfcLyLoCIBUw&#xd;
+Content-Disposition: form-data; name=&quot;test2&quot;&#xd;
+&#xd;
+112122qawqwqwqwqwqwabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc11111112121212121212121212121111111111111111111111212121212121212121212121111111111 &lt;UserIdentityKey&gt;201502145&lt;/UserIdentityKey&gt; &lt;BaseQuery&gt;FreeQuery&lt;/BaseQuery&gt; &lt;QueryOrigin&gt;8&lt;/QueryOrigin&gt; &lt;IsPublic&gt;false&lt;/IsPublic&gt; &lt;IsDefaultQuery&gt;false&lt;/IsDefaultQuery&gt; &lt;DisplayInHomePage&gt;true&lt;/DisplayInHomePage&gt; &lt;UseDistinctClause&gt;false&lt;/UseDistinctClause&gt; &lt;CSSMarkedForDelete&gt;false&lt;/CSSMarkedForDelete&gt; &lt;FreeQueryInfos diffgr:id=&quot;FreeQueryInfos1&quot; msdata:rowOrder=&quot;0&quot; diffgr:hasChanges=&quot;inserted&quot;&gt; &lt;FreeQueryInfosKey&gt;FreeQueryInfos_NewClientKey&lt;/FreeQueryInfosKey&gt; &lt;QueryKey&gt;QuerySearch_NewClientKey&lt;/QueryKey&gt; &lt;GlobalMediaTextQueryKey&gt;NewClientKey001&lt;/GlobalMediaTextQueryKey&gt; &lt;GlobalMediaHtmlQueryKey&gt;NewClientKey001&lt;/GlobalMediaHtmlQueryKey&gt; &lt;GlobalMediaTextQuery&gt;select from &lt;/GlobalMediaTextQuery&gt; &lt;GlobalMediaHtmlQuery&gt;select from &lt;/GlobalMediaHtmlQuery&gt; &lt;CSSMarkedForDelete&gt;false&lt;/CSSMarkedForDelete&gt; &lt;/FreeQueryInfos&gt; &lt;QueryComment&gt;&amp;lt;a href=&quot;&quot;javascript:alert(&apos;111&apos;); void(0);&quot;&quot;&amp;gt;test111&amp;lt;/a&amp;gt;&lt;/QueryComment&gt;&lt;QueryDescription&gt;&amp;lt;a href=&quot;&quot;javascript:alert(&apos;111&apos;); void(0);&quot;&quot;&amp;gt;test111&amp;lt;/a&amp;gt;&lt;/QueryDescription&gt;&lt;/QuerySearch&gt; &lt;/FreeQueryDataRaw&gt; &lt;/diffgr:diffgram&gt;&#xd;
+------WebKitFormBoundarykteXcfcLyLoCIBUw&#xd;
+Content-Disposition: form-data; name=&quot;&quot;&#xd;
+&#xd;
+&#xd;
+------WebKitFormBoundarykteXcfcLyLoCIBUw--&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">test.tiga.com</stringProp>
+          <stringProp name="HTTPSampler.port">8090</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">CLOUD-WAF-POLICY-HOST</stringProp>
+                <stringProp name="Header.value">qgliu.qcloudwaf.com</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="17.04.001_Verify that request with chunked and content type multipart form-data can upload file well" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">POST /autotest/zwk/upload.php HTTP/1.1&#xd;
+Host: 10.0.11.130:8090&#xd;
+Connection: keep-alive&#xd;
+Cache-Control: max-age=0&#xd;
+Origin: http://10.0.11.130:8090&#xd;
+Upgrade-Insecure-Requests: 1&#xd;
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary4A7ii0fBWGzuc7Xl&#xd;
+User-Agent: Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36&#xd;
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9&#xd;
+Referer: http://10.0.11.130:8090/autotest/zwk/upload.html&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+Accept-Language: zh-CN,zh;q=0.9&#xd;
+Transfer-Encoding: chunked&#xd;
+&#xd;
+28&#xd;
+------WebKitFormBoundary4A7ii0fBWGzuc7Xl&#xd;
+35&#xd;
+Content-Disposition: form-data; name=&quot;MAX_FILE_SIZE &quot;&#xd;
+0b&#xd;
+&#xd;
+700000000&#xd;
+28&#xd;
+------WebKitFormBoundary4A7ii0fBWGzuc7Xl&#xd;
+46&#xd;
+Content-Disposition: form-data; name=&quot;userfile&quot;; filename=&quot;100b_1.txt&quot;&#xd;
+1a&#xd;
+Content-Type: text/plain&#xd;
+&#xd;
+76&#xd;
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890para2=mocha:aatest&#xd;
+28&#xd;
+------WebKitFormBoundary4A7ii0fBWGzuc7Xl&#xd;
+47&#xd;
+Content-Disposition: form-data; name=&quot;userfile1&quot;; filename=&quot;100b_6.txt&quot;&#xd;
+1a&#xd;
+Content-Type: text/plain&#xd;
+&#xd;
+3&#xd;
+102&#xd;
+28&#xd;
+------WebKitFormBoundary4A7ii0fBWGzuc7Xl&#xd;
+47&#xd;
+Content-Disposition: form-data; name=&quot;userfile2&quot;; filename=&quot;100b_8.txt&quot;&#xd;
+1a&#xd;
+Content-Type: text/plain&#xd;
+&#xd;
+3&#xd;
+102&#xd;
+2a&#xd;
+------WebKitFormBoundary4A7ii0fBWGzuc7Xl--&#xd;
+0&#xd;
+&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">test.tiga.com</stringProp>
+          <stringProp name="HTTPSampler.port">8090</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">CLOUD-WAF-POLICY-HOST</stringProp>
+                <stringProp name="Header.value">qgliu.qcloudwaf.com</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="17.04.002_Verify that request with chunked and content type multipart form-data can upload file well" enabled="true">
+          <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="HTTPArgument">
+                <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                <stringProp name="Argument.value">POST /autotest/upload/upload.php HTTP/1.1&#xd;
+Host: vote3.parameterlen.com.cn&#xd;
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:10.0.12) Gecko/20100101 Firefox/10.0.12&#xd;
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8&#xd;
+Accept-Language: en-us,en;q=0.7,zh;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+DNT: 1&#xd;
+Connection: keep-alive&#xd;
+Content-Type: multipart/form-data; boundary=---------------------------146043902153&#xd;
+Transfer-Encoding: chunked&#xd;
+&#xd;
+10d8&#xd;
+-----------------------------146043902153&#xd;
+Content-Disposition: form-data; name=&quot;MAX_FILE_SIZE &quot;&#xd;
+&#xd;
+700000000&#xd;
+-----------------------------146043902153&#xd;
+Content-Disposition: form-data; name=&quot;userfile1&quot;; filename=&quot;1001.txt&quot;&#xd;
+Content-Type: text/plain&#xd;
+&#xd;
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890&#xd;
+-----------------------------146043902153&#xd;
+Content-Disposition: form-data; name=&quot;userfile2&quot;; filename=&quot;1002.txt&quot;&#xd;
+Content-Type: text/plain&#xd;
+&#xd;
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890&#xd;
+-----------------------------146043902153&#xd;
+Content-Disposition: form-data; name=&quot;userfile3&quot;; filename=&quot;1003.txt&quot;&#xd;
+Content-Type: text/plain&#xd;
+&#xd;
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890&#xd;
+-----------------------------146043902153&#xd;
+Content-Disposition: form-data; name=&quot;userfile4&quot;; filename=&quot;1004.txt&quot;&#xd;
+Content-Type: text/plain&#xd;
+&#xd;
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890&#xd;
+-----------------------------146043902153&#xd;
+Content-Disposition: form-data; name=&quot;userfile5&quot;; filename=&quot;1005.txt&quot;&#xd;
+Content-Type: text/plain&#xd;
+&#xd;
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890&#xd;
+-----------------------------146043902153&#xd;
+Content-Disposition: form-data; name=&quot;userfile6&quot;; filename=&quot;1006.txt&quot;&#xd;
+Content-Type: text/plain&#xd;
+&#xd;
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890&#xd;
+-----------------------------146043902153&#xd;
+Content-Disposition: form-data; name=&quot;userfile7&quot;; filename=&quot;1007.txt&quot;&#xd;
+Content-Type: text/plain&#xd;
+&#xd;
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890&#xd;
+-----------------------------146043902153&#xd;
+Content-Disposition: form-data; name=&quot;userfile8&quot;; filename=&quot;1008.txt&quot;&#xd;
+Content-Type: text/plain&#xd;
+&#xd;
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890&#xd;
+-----------------------------146043902153&#xd;
+Content-Disposition: form-data; name=&quot;userfile9&quot;; filename=&quot;1009.txt&quot;&#xd;
+Content-Type: text/plain&#xd;
+&#xd;
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890&#xd;
+-----------------------------146043902153&#xd;
+Content-Disposition: form-data; name=&quot;userfile10&quot;; filename=&quot;100a.txt&quot;&#xd;
+Content-Type: text/plain&#xd;
+&#xd;
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890&#xd;
+-----------------------------146043902153&#xd;
+Content-Disposition: form-data; name=&quot;userfile11&quot;; filename=&quot;100b.txt&quot;&#xd;
+Content-Type: text/plain&#xd;
+&#xd;
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890&#xd;
+-----------------------------146043902153&#xd;
+Content-Disposition: form-data; name=&quot;userfile12&quot;; filename=&quot;100c.txt&quot;&#xd;
+Content-Type: text/plain&#xd;
+&#xd;
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890&#xd;
+-----------------------------146043902153&#xd;
+Content-Disposition: form-data; name=&quot;userfile13&quot;; filename=&quot;100d.txt&quot;&#xd;
+Content-Type: text/plain&#xd;
+&#xd;
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890&#xd;
+-----------------------------146043902153&#xd;
+Content-Disposition: form-data; name=&quot;userfile14&quot;; filename=&quot;100e.txt&quot;&#xd;
+Content-Type: text/plain&#xd;
+&#xd;
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890&#xd;
+-----------------------------146043902153&#xd;
+Content-Disposition: form-data; name=&quot;userfile15&quot;; filename=&quot;100f.txt&quot;&#xd;
+Content-Type: text/plain&#xd;
+&#xd;
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890&#xd;
+-----------------------------146043902153&#xd;
+Content-Disposition: form-data; name=&quot;userfile16&quot;; filename=&quot;1010.txt&quot;&#xd;
+Content-Type: text/plain&#xd;
+&#xd;
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890&#xd;
+-----------------------------146043902153&#xd;
+Content-Disposition: form-data; name=&quot;userfile17&quot;; filename=&quot;1011.txt&quot;&#xd;
+Content-Type: text/plain&#xd;
+&#xd;
+1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890&#xd;
+-----------------------------146043902153--&#xd;
+&#xd;
+0&#xd;
+&#xd;
+</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">test.tiga.com</stringProp>
+          <stringProp name="HTTPSampler.port">8090</stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/</stringProp>
+          <stringProp name="HTTPSampler.method">POST</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree>
+          <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP信息头管理器" enabled="true">
+            <collectionProp name="HeaderManager.headers">
+              <elementProp name="" elementType="Header">
+                <stringProp name="Header.name">CLOUD-WAF-POLICY-HOST</stringProp>
+                <stringProp name="Header.value">qgliu.qcloudwaf.com</stringProp>
+              </elementProp>
+            </collectionProp>
+          </HeaderManager>
+          <hashTree/>
+          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
+            <collectionProp name="Asserion.test_strings">
+              <stringProp name="49586">200</stringProp>
+            </collectionProp>
+            <stringProp name="Assertion.custom_message"></stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <boolProp name="Assertion.assume_success">false</boolProp>
+            <intProp name="Assertion.test_type">8</intProp>
+          </ResponseAssertion>
+          <hashTree/>
+        </hashTree>
       </hashTree>
     </hashTree>
   </hashTree>
