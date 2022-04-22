@@ -1866,7 +1866,7 @@ Connection: keep-alive&#xd;
               <stringProp name="134352671">{&quot;hit&quot;:false</stringProp>
             </collectionProp>
             <stringProp name="Assertion.custom_message"></stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
             <boolProp name="Assertion.assume_success">false</boolProp>
             <intProp name="Assertion.test_type">2</intProp>
           </ResponseAssertion>
@@ -1921,7 +1921,7 @@ Connection: keep-alive&#xd;
               <stringProp name="134352671">{&quot;hit&quot;:false</stringProp>
             </collectionProp>
             <stringProp name="Assertion.custom_message"></stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
+            <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
             <boolProp name="Assertion.assume_success">false</boolProp>
             <intProp name="Assertion.test_type">2</intProp>
           </ResponseAssertion>
@@ -2751,7 +2751,7 @@ Content-Disposition: form-data; name=&quot;&quot;&#xd;
           <hashTree/>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="134352671">{&quot;hit&quot;:false</stringProp>
+              <stringProp name="143314962">{&quot;hit&quot;:true</stringProp>
             </collectionProp>
             <stringProp name="Assertion.custom_message"></stringProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -2813,7 +2813,7 @@ Content-Disposition: form-data; name=&quot;&quot;&#xd;
           <hashTree/>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="134352671">{&quot;hit&quot;:false</stringProp>
+              <stringProp name="143314962">{&quot;hit&quot;:true</stringProp>
             </collectionProp>
             <stringProp name="Assertion.custom_message"></stringProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -2924,7 +2924,7 @@ id=1&apos; or&apos; 1&apos; =&apos; 1&amp;Submit=Submit</stringProp>
           <hashTree/>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="134352671">{&quot;hit&quot;:false</stringProp>
+              <stringProp name="143314962">{&quot;hit&quot;:true</stringProp>
             </collectionProp>
             <stringProp name="Assertion.custom_message"></stringProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -3018,7 +3018,7 @@ t&#xd;
           <hashTree/>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="134352671">{&quot;hit&quot;:false</stringProp>
+              <stringProp name="143314962">{&quot;hit&quot;:true</stringProp>
             </collectionProp>
             <stringProp name="Assertion.custom_message"></stringProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -3622,7 +3622,7 @@ t&#xd;
           <hashTree/>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="134352671">{&quot;hit&quot;:false</stringProp>
+              <stringProp name="143314962">{&quot;hit&quot;:true</stringProp>
             </collectionProp>
             <stringProp name="Assertion.custom_message"></stringProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -3724,7 +3724,7 @@ abcde000111abcdefghijklmnopqrstuvwxyz1234567890123456789012345678901234567890123
           <hashTree/>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="134352671">{&quot;hit&quot;:false</stringProp>
+              <stringProp name="143314962">{&quot;hit&quot;:true</stringProp>
             </collectionProp>
             <stringProp name="Assertion.custom_message"></stringProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -3827,7 +3827,7 @@ abcde000111abcdefghijklmnopqrstuvwxyz1234567890123456789012345678901234567890123
           <hashTree/>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="134352671">{&quot;hit&quot;:false</stringProp>
+              <stringProp name="143314962">{&quot;hit&quot;:true</stringProp>
             </collectionProp>
             <stringProp name="Assertion.custom_message"></stringProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -3896,7 +3896,7 @@ Content-Disposition: form-data; name=&quot;&quot;&#xd;
           <hashTree/>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="134352671">{&quot;hit&quot;:false</stringProp>
+              <stringProp name="143314962">{&quot;hit&quot;:true</stringProp>
             </collectionProp>
             <stringProp name="Assertion.custom_message"></stringProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
@@ -3965,7 +3965,7 @@ Content-Disposition: form-data; name=&quot;&quot;&#xd;
           <hashTree/>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="响应断言" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="134352671">{&quot;hit&quot;:false</stringProp>
+              <stringProp name="143314962">{&quot;hit&quot;:true</stringProp>
             </collectionProp>
             <stringProp name="Assertion.custom_message"></stringProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
